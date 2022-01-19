@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F27EFEF62797E23900F24869 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFEF52797E23900F24869 /* AppDelegate.swift */; };
+		F27EFEF82797E23900F24869 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFEF72797E23900F24869 /* SceneDelegate.swift */; };
+		F27EFEFA2797E23900F24869 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFEF92797E23900F24869 /* ViewController.swift */; };
+		F27EFEFD2797E23900F24869 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F27EFEFB2797E23900F24869 /* Main.storyboard */; };
+		F27EFEFF2797E23B00F24869 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F27EFEFE2797E23B00F24869 /* Assets.xcassets */; };
+		F27EFF022797E23B00F24869 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F27EFF002797E23B00F24869 /* LaunchScreen.storyboard */; };
+		F27EFF0D2797E23C00F24869 /* Bareksa_TakeHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFF0C2797E23C00F24869 /* Bareksa_TakeHomeTests.swift */; };
+		F27EFF172797E23C00F24869 /* Bareksa_TakeHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFF162797E23C00F24869 /* Bareksa_TakeHomeUITests.swift */; };
+		F27EFF192797E23C00F24869 /* Bareksa_TakeHomeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFF182797E23C00F24869 /* Bareksa_TakeHomeUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F27EFF092797E23C00F24869 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F27EFEEA2797E23900F24869 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F27EFEF12797E23900F24869;
+			remoteInfo = "Bareksa-TakeHome";
+		};
+		F27EFF132797E23C00F24869 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F27EFEEA2797E23900F24869 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F27EFEF12797E23900F24869;
+			remoteInfo = "Bareksa-TakeHome";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F27EFEF22797E23900F24869 /* Bareksa-TakeHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bareksa-TakeHome.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F27EFEF52797E23900F24869 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F27EFEF72797E23900F24869 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F27EFEF92797E23900F24869 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F27EFEFC2797E23900F24869 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F27EFEFE2797E23B00F24869 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F27EFF012797E23B00F24869 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F27EFF032797E23B00F24869 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F27EFF082797E23C00F24869 /* Bareksa-TakeHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bareksa-TakeHomeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F27EFF0C2797E23C00F24869 /* Bareksa_TakeHomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bareksa_TakeHomeTests.swift; sourceTree = "<group>"; };
+		F27EFF122797E23C00F24869 /* Bareksa-TakeHomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bareksa-TakeHomeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F27EFF162797E23C00F24869 /* Bareksa_TakeHomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bareksa_TakeHomeUITests.swift; sourceTree = "<group>"; };
+		F27EFF182797E23C00F24869 /* Bareksa_TakeHomeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bareksa_TakeHomeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F27EFEEF2797E23900F24869 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F27EFF052797E23C00F24869 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F27EFF0F2797E23C00F24869 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F27EFEE92797E23900F24869 = {
+			isa = PBXGroup;
+			children = (
+				F27EFEF42797E23900F24869 /* Bareksa-TakeHome */,
+				F27EFF0B2797E23C00F24869 /* Bareksa-TakeHomeTests */,
+				F27EFF152797E23C00F24869 /* Bareksa-TakeHomeUITests */,
+				F27EFEF32797E23900F24869 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F27EFEF32797E23900F24869 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F27EFEF22797E23900F24869 /* Bareksa-TakeHome.app */,
+				F27EFF082797E23C00F24869 /* Bareksa-TakeHomeTests.xctest */,
+				F27EFF122797E23C00F24869 /* Bareksa-TakeHomeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F27EFEF42797E23900F24869 /* Bareksa-TakeHome */ = {
+			isa = PBXGroup;
+			children = (
+				F27EFEF52797E23900F24869 /* AppDelegate.swift */,
+				F27EFEF72797E23900F24869 /* SceneDelegate.swift */,
+				F27EFEF92797E23900F24869 /* ViewController.swift */,
+				F27EFEFB2797E23900F24869 /* Main.storyboard */,
+				F27EFEFE2797E23B00F24869 /* Assets.xcassets */,
+				F27EFF002797E23B00F24869 /* LaunchScreen.storyboard */,
+				F27EFF032797E23B00F24869 /* Info.plist */,
+			);
+			path = "Bareksa-TakeHome";
+			sourceTree = "<group>";
+		};
+		F27EFF0B2797E23C00F24869 /* Bareksa-TakeHomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				F27EFF0C2797E23C00F24869 /* Bareksa_TakeHomeTests.swift */,
+			);
+			path = "Bareksa-TakeHomeTests";
+			sourceTree = "<group>";
+		};
+		F27EFF152797E23C00F24869 /* Bareksa-TakeHomeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F27EFF162797E23C00F24869 /* Bareksa_TakeHomeUITests.swift */,
+				F27EFF182797E23C00F24869 /* Bareksa_TakeHomeUITestsLaunchTests.swift */,
+			);
+			path = "Bareksa-TakeHomeUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F27EFEF12797E23900F24869 /* Bareksa-TakeHome */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F27EFF1C2797E23C00F24869 /* Build configuration list for PBXNativeTarget "Bareksa-TakeHome" */;
+			buildPhases = (
+				F27EFEEE2797E23900F24869 /* Sources */,
+				F27EFEEF2797E23900F24869 /* Frameworks */,
+				F27EFEF02797E23900F24869 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Bareksa-TakeHome";
+			productName = "Bareksa-TakeHome";
+			productReference = F27EFEF22797E23900F24869 /* Bareksa-TakeHome.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F27EFF072797E23C00F24869 /* Bareksa-TakeHomeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F27EFF1F2797E23C00F24869 /* Build configuration list for PBXNativeTarget "Bareksa-TakeHomeTests" */;
+			buildPhases = (
+				F27EFF042797E23C00F24869 /* Sources */,
+				F27EFF052797E23C00F24869 /* Frameworks */,
+				F27EFF062797E23C00F24869 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F27EFF0A2797E23C00F24869 /* PBXTargetDependency */,
+			);
+			name = "Bareksa-TakeHomeTests";
+			productName = "Bareksa-TakeHomeTests";
+			productReference = F27EFF082797E23C00F24869 /* Bareksa-TakeHomeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F27EFF112797E23C00F24869 /* Bareksa-TakeHomeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F27EFF222797E23C00F24869 /* Build configuration list for PBXNativeTarget "Bareksa-TakeHomeUITests" */;
+			buildPhases = (
+				F27EFF0E2797E23C00F24869 /* Sources */,
+				F27EFF0F2797E23C00F24869 /* Frameworks */,
+				F27EFF102797E23C00F24869 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F27EFF142797E23C00F24869 /* PBXTargetDependency */,
+			);
+			name = "Bareksa-TakeHomeUITests";
+			productName = "Bareksa-TakeHomeUITests";
+			productReference = F27EFF122797E23C00F24869 /* Bareksa-TakeHomeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F27EFEEA2797E23900F24869 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					F27EFEF12797E23900F24869 = {
+						CreatedOnToolsVersion = 13.2;
+					};
+					F27EFF072797E23C00F24869 = {
+						CreatedOnToolsVersion = 13.2;
+						TestTargetID = F27EFEF12797E23900F24869;
+					};
+					F27EFF112797E23C00F24869 = {
+						CreatedOnToolsVersion = 13.2;
+						TestTargetID = F27EFEF12797E23900F24869;
+					};
+				};
+			};
+			buildConfigurationList = F27EFEED2797E23900F24869 /* Build configuration list for PBXProject "Bareksa-TakeHome" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F27EFEE92797E23900F24869;
+			productRefGroup = F27EFEF32797E23900F24869 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F27EFEF12797E23900F24869 /* Bareksa-TakeHome */,
+				F27EFF072797E23C00F24869 /* Bareksa-TakeHomeTests */,
+				F27EFF112797E23C00F24869 /* Bareksa-TakeHomeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F27EFEF02797E23900F24869 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F27EFF022797E23B00F24869 /* LaunchScreen.storyboard in Resources */,
+				F27EFEFF2797E23B00F24869 /* Assets.xcassets in Resources */,
+				F27EFEFD2797E23900F24869 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F27EFF062797E23C00F24869 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F27EFF102797E23C00F24869 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F27EFEEE2797E23900F24869 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F27EFEFA2797E23900F24869 /* ViewController.swift in Sources */,
+				F27EFEF62797E23900F24869 /* AppDelegate.swift in Sources */,
+				F27EFEF82797E23900F24869 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F27EFF042797E23C00F24869 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F27EFF0D2797E23C00F24869 /* Bareksa_TakeHomeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F27EFF0E2797E23C00F24869 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F27EFF192797E23C00F24869 /* Bareksa_TakeHomeUITestsLaunchTests.swift in Sources */,
+				F27EFF172797E23C00F24869 /* Bareksa_TakeHomeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F27EFF0A2797E23C00F24869 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F27EFEF12797E23900F24869 /* Bareksa-TakeHome */;
+			targetProxy = F27EFF092797E23C00F24869 /* PBXContainerItemProxy */;
+		};
+		F27EFF142797E23C00F24869 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F27EFEF12797E23900F24869 /* Bareksa-TakeHome */;
+			targetProxy = F27EFF132797E23C00F24869 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F27EFEFB2797E23900F24869 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F27EFEFC2797E23900F24869 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F27EFF002797E23B00F24869 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F27EFF012797E23B00F24869 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F27EFF1A2797E23C00F24869 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F27EFF1B2797E23C00F24869 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F27EFF1D2797E23C00F24869 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J88B74NG29;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Bareksa-TakeHome/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iqbalza.Bareksa-TakeHome";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F27EFF1E2797E23C00F24869 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J88B74NG29;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Bareksa-TakeHome/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iqbalza.Bareksa-TakeHome";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F27EFF202797E23C00F24869 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J88B74NG29;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iqbalza.Bareksa-TakeHomeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bareksa-TakeHome.app/Bareksa-TakeHome";
+			};
+			name = Debug;
+		};
+		F27EFF212797E23C00F24869 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J88B74NG29;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iqbalza.Bareksa-TakeHomeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bareksa-TakeHome.app/Bareksa-TakeHome";
+			};
+			name = Release;
+		};
+		F27EFF232797E23C00F24869 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J88B74NG29;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iqbalza.Bareksa-TakeHomeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Bareksa-TakeHome";
+			};
+			name = Debug;
+		};
+		F27EFF242797E23C00F24869 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J88B74NG29;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iqbalza.Bareksa-TakeHomeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Bareksa-TakeHome";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F27EFEED2797E23900F24869 /* Build configuration list for PBXProject "Bareksa-TakeHome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F27EFF1A2797E23C00F24869 /* Debug */,
+				F27EFF1B2797E23C00F24869 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F27EFF1C2797E23C00F24869 /* Build configuration list for PBXNativeTarget "Bareksa-TakeHome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F27EFF1D2797E23C00F24869 /* Debug */,
+				F27EFF1E2797E23C00F24869 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F27EFF1F2797E23C00F24869 /* Build configuration list for PBXNativeTarget "Bareksa-TakeHomeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F27EFF202797E23C00F24869 /* Debug */,
+				F27EFF212797E23C00F24869 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F27EFF222797E23C00F24869 /* Build configuration list for PBXNativeTarget "Bareksa-TakeHomeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F27EFF232797E23C00F24869 /* Debug */,
+				F27EFF242797E23C00F24869 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F27EFEEA2797E23900F24869 /* Project object */;
+}
