@@ -22,6 +22,9 @@
 		F27EFF262797F17100F24869 /* CompareViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFF252797F17100F24869 /* CompareViewModel.swift */; };
 		F27EFF2A2797F36000F24869 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F27EFF292797F36000F24869 /* Montserrat-Medium.ttf */; };
 		F27EFF2C2797F36A00F24869 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F27EFF2B2797F36A00F24869 /* Montserrat-SemiBold.ttf */; };
+		F27EFF2F2797F56C00F24869 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFF2E2797F56C00F24869 /* Endpoint.swift */; };
+		F27EFF322797F70900F24869 /* ProductDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFF312797F70900F24869 /* ProductDetailResponse.swift */; };
+		F27EFF342797FFA200F24869 /* ChartDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFF332797FFA200F24869 /* ChartDataResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		F27EFF252797F17100F24869 /* CompareViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareViewModel.swift; sourceTree = "<group>"; };
 		F27EFF292797F36000F24869 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		F27EFF2B2797F36A00F24869 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		F27EFF2E2797F56C00F24869 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		F27EFF312797F70900F24869 /* ProductDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailResponse.swift; sourceTree = "<group>"; };
+		F27EFF332797FFA200F24869 /* ChartDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDataResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,8 @@
 		F27EFEF42797E23900F24869 /* Bareksa-TakeHome */ = {
 			isa = PBXGroup;
 			children = (
+				F27EFF302797F6E800F24869 /* Models */,
+				F27EFF2D2797F54300F24869 /* API */,
 				F27EFF282797F34D00F24869 /* Font */,
 				F27EFF272797F17800F24869 /* Module */,
 				F27EFEF52797E23900F24869 /* AppDelegate.swift */,
@@ -177,6 +185,23 @@
 				F27EFF292797F36000F24869 /* Montserrat-Medium.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		F27EFF2D2797F54300F24869 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				F27EFF2E2797F56C00F24869 /* Endpoint.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		F27EFF302797F6E800F24869 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F27EFF312797F70900F24869 /* ProductDetailResponse.swift */,
+				F27EFF332797FFA200F24869 /* ChartDataResponse.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FDB2AB35031B015890BBCB23 /* Pods */ = {
@@ -435,8 +460,11 @@
 			files = (
 				F27EFF262797F17100F24869 /* CompareViewModel.swift in Sources */,
 				F27EFEFA2797E23900F24869 /* CompareViewController.swift in Sources */,
+				F27EFF342797FFA200F24869 /* ChartDataResponse.swift in Sources */,
 				F27EFEF62797E23900F24869 /* AppDelegate.swift in Sources */,
+				F27EFF322797F70900F24869 /* ProductDetailResponse.swift in Sources */,
 				F27EFEF82797E23900F24869 /* SceneDelegate.swift in Sources */,
+				F27EFF2F2797F56C00F24869 /* Endpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
