@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CompareViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

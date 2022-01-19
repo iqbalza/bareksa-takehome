@@ -12,13 +12,16 @@
 		A89A5DB43777E57AC6B67547 /* Pods_Bareksa_TakeHome_Bareksa_TakeHomeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 267F97A45A29BBADF3A580DB /* Pods_Bareksa_TakeHome_Bareksa_TakeHomeUITests.framework */; };
 		F27EFEF62797E23900F24869 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFEF52797E23900F24869 /* AppDelegate.swift */; };
 		F27EFEF82797E23900F24869 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFEF72797E23900F24869 /* SceneDelegate.swift */; };
-		F27EFEFA2797E23900F24869 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFEF92797E23900F24869 /* ViewController.swift */; };
+		F27EFEFA2797E23900F24869 /* CompareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFEF92797E23900F24869 /* CompareViewController.swift */; };
 		F27EFEFD2797E23900F24869 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F27EFEFB2797E23900F24869 /* Main.storyboard */; };
 		F27EFEFF2797E23B00F24869 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F27EFEFE2797E23B00F24869 /* Assets.xcassets */; };
 		F27EFF022797E23B00F24869 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F27EFF002797E23B00F24869 /* LaunchScreen.storyboard */; };
 		F27EFF0D2797E23C00F24869 /* Bareksa_TakeHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFF0C2797E23C00F24869 /* Bareksa_TakeHomeTests.swift */; };
 		F27EFF172797E23C00F24869 /* Bareksa_TakeHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFF162797E23C00F24869 /* Bareksa_TakeHomeUITests.swift */; };
 		F27EFF192797E23C00F24869 /* Bareksa_TakeHomeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFF182797E23C00F24869 /* Bareksa_TakeHomeUITestsLaunchTests.swift */; };
+		F27EFF262797F17100F24869 /* CompareViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFF252797F17100F24869 /* CompareViewModel.swift */; };
+		F27EFF2A2797F36000F24869 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F27EFF292797F36000F24869 /* Montserrat-Medium.ttf */; };
+		F27EFF2C2797F36A00F24869 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F27EFF2B2797F36A00F24869 /* Montserrat-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +54,7 @@
 		F27EFEF22797E23900F24869 /* Bareksa-TakeHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bareksa-TakeHome.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F27EFEF52797E23900F24869 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F27EFEF72797E23900F24869 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F27EFEF92797E23900F24869 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F27EFEF92797E23900F24869 /* CompareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareViewController.swift; sourceTree = "<group>"; };
 		F27EFEFC2797E23900F24869 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F27EFEFE2797E23B00F24869 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F27EFF012797E23B00F24869 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,6 +64,9 @@
 		F27EFF122797E23C00F24869 /* Bareksa-TakeHomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bareksa-TakeHomeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F27EFF162797E23C00F24869 /* Bareksa_TakeHomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bareksa_TakeHomeUITests.swift; sourceTree = "<group>"; };
 		F27EFF182797E23C00F24869 /* Bareksa_TakeHomeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bareksa_TakeHomeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F27EFF252797F17100F24869 /* CompareViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareViewModel.swift; sourceTree = "<group>"; };
+		F27EFF292797F36000F24869 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		F27EFF2B2797F36A00F24869 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,10 +132,10 @@
 		F27EFEF42797E23900F24869 /* Bareksa-TakeHome */ = {
 			isa = PBXGroup;
 			children = (
+				F27EFF282797F34D00F24869 /* Font */,
+				F27EFF272797F17800F24869 /* Module */,
 				F27EFEF52797E23900F24869 /* AppDelegate.swift */,
 				F27EFEF72797E23900F24869 /* SceneDelegate.swift */,
-				F27EFEF92797E23900F24869 /* ViewController.swift */,
-				F27EFEFB2797E23900F24869 /* Main.storyboard */,
 				F27EFEFE2797E23B00F24869 /* Assets.xcassets */,
 				F27EFF002797E23B00F24869 /* LaunchScreen.storyboard */,
 				F27EFF032797E23B00F24869 /* Info.plist */,
@@ -154,6 +160,25 @@
 			path = "Bareksa-TakeHomeUITests";
 			sourceTree = "<group>";
 		};
+		F27EFF272797F17800F24869 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				F27EFEFB2797E23900F24869 /* Main.storyboard */,
+				F27EFEF92797E23900F24869 /* CompareViewController.swift */,
+				F27EFF252797F17100F24869 /* CompareViewModel.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		F27EFF282797F34D00F24869 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				F27EFF2B2797F36A00F24869 /* Montserrat-SemiBold.ttf */,
+				F27EFF292797F36000F24869 /* Montserrat-Medium.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		FDB2AB35031B015890BBCB23 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,7 +189,6 @@
 				B681A41AB7A04371CAB5BCE4 /* Pods-Bareksa-TakeHomeTests.debug.xcconfig */,
 				28AE00301F5BFA1350121A52 /* Pods-Bareksa-TakeHomeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -279,7 +303,9 @@
 			files = (
 				F27EFF022797E23B00F24869 /* LaunchScreen.storyboard in Resources */,
 				F27EFEFF2797E23B00F24869 /* Assets.xcassets in Resources */,
+				F27EFF2A2797F36000F24869 /* Montserrat-Medium.ttf in Resources */,
 				F27EFEFD2797E23900F24869 /* Main.storyboard in Resources */,
+				F27EFF2C2797F36A00F24869 /* Montserrat-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,7 +433,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F27EFEFA2797E23900F24869 /* ViewController.swift in Sources */,
+				F27EFF262797F17100F24869 /* CompareViewModel.swift in Sources */,
+				F27EFEFA2797E23900F24869 /* CompareViewController.swift in Sources */,
 				F27EFEF62797E23900F24869 /* AppDelegate.swift in Sources */,
 				F27EFEF82797E23900F24869 /* SceneDelegate.swift in Sources */,
 			);
