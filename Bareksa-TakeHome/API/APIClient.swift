@@ -32,12 +32,12 @@ struct APIManager: APIManagerProtocol {
             return Disposables.create()
         }
           
-        print(url)
+//        print(url)
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = endpoint.method
                   
        let task = URLSession.shared.dataTask(with: urlRequest) { (data,response,error) in
-            guard let data = data, let httpResponse = response as? HTTPURLResponse, error == nil else {
+            guard let data = data, let httpResponse = response as? HTTPURLResponse else {
                 //No data
                 observer(.failure(APIError.serverError(error: error!.localizedDescription)))
                 print("\(String(describing: error))")
