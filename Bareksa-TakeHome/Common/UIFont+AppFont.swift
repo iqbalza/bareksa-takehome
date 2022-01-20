@@ -9,11 +9,11 @@ import Foundation
 import UIKit
 
 extension UIFont {
-    func appFont(ofSize: CGFloat) -> UIFont {
+   static func appFont(ofSize: CGFloat) -> UIFont {
         return UIFont(name: "Montserrat-Medium", size: ofSize)!
     }
     
-    func boldAppFont(ofSize: CGFloat) -> UIFont {
+    static func boldAppFont(ofSize: CGFloat) -> UIFont {
         return UIFont(name: "Montserrat", size: ofSize)!
     }
 }
