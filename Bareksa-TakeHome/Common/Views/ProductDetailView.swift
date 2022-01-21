@@ -15,7 +15,7 @@ class ProductDetailView: UIView {
         let lbl = UILabel()
         lbl.font = .appFont(ofSize: 12)
         lbl.text = " "
-        lbl.textColor = .lightGray
+        lbl.textColor = .gray
         lbl.setContentHuggingPriority(.defaultHigh, for: .vertical)
         return lbl
     }()
