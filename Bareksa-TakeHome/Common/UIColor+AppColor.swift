@@ -17,24 +17,5 @@ extension UIColor {
     static let linePurple = UIColor(red: 0.447, green: 0.369, blue: 0.612, alpha: 1)
     static let lineBlue = UIColor(red: 0.428, green: 0.595, blue: 0.714, alpha: 1)
     
-    static func getProductColor(index: Int) -> UIColor {
-        switch index {
-        case 0:
-           return .productGreen
-        case 1:
-            return .productPurple
-        default:
-            return .productBlue
-        }
-}
-    static func getLineColor(index: Int) -> UIColor {
-        switch index {
-        case 0:
-           return .lineGreen
-        case 1:
-            return .linePurple
-        default:
-            return .lineBlue
-        }
-    }
+    
 }
