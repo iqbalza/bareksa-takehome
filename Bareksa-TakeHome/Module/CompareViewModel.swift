@@ -59,8 +59,8 @@ extension CompareViewModel {
         var productTitle: String {
             model.name
         }
-        var productImage: String {
-            model.details.im_avatar
+        var productImage: URL {
+            URL(string: model.details.im_avatar)!
         }
         
         

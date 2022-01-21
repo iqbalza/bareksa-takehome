@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import SnapKit
+import SDWebImage
 
 class CompareView: UIView {
     
@@ -76,7 +77,7 @@ class CompareView: UIView {
             
             let productTitleView = ProductTitleView(color: color)
             productTitleView.titleLbl.text = viewModel.productTitle
-//            productTitleView.logoImageView = viewModel.productImage
+            productTitleView.logoImageView.sd_setImage(with: viewModel.productImage) 
             productTitleStackView.addArrangedSubview(productTitleView)
             
             let productDetailVerticalStackview = UIStackView()

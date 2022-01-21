@@ -10,7 +10,6 @@ import SnapKit
 
 class ProductTitleView: UIView {
     
-    
     var color: UIColor
     
     lazy var containerView: UIView = {
@@ -32,7 +31,6 @@ class ProductTitleView: UIView {
     
     lazy var logoImageView: UIImageView = {
        let logoImageView = UIImageView()
-        logoImageView.image = UIImage(named: "add")
        return logoImageView
     }()
     
