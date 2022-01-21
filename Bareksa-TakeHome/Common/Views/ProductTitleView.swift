@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 class ProductTitleView: UIView {
-    
+        
     var color: UIColor
     
     lazy var containerView: UIView = {
@@ -31,6 +31,7 @@ class ProductTitleView: UIView {
     
     lazy var logoImageView: UIImageView = {
        let logoImageView = UIImageView()
+        logoImageView.contentMode = .scaleAspectFill
        return logoImageView
     }()
     
@@ -51,6 +52,7 @@ class ProductTitleView: UIView {
         
         containerView.snp.makeConstraints { (make) in
             make.top.bottom.trailing.leading.equalToSuperview()
+            make.width.equalTo(containerView.snp.height).multipliedBy(202 / 244)
         }
         
         logoImageView.snp.makeConstraints { (make) in
@@ -59,14 +61,30 @@ class ProductTitleView: UIView {
         }
         
         titleLbl.snp.makeConstraints { (make) in
-            make.top.equalTo(logoImageView.snp.bottom).offset(8)
-            make.leading.equalToSuperview().offset(16)
-            make.bottom.equalToSuperview().offset(-16)
-            make.trailing.lessThanOrEqualToSuperview().offset(-16)
+            make.top.equalTo(logoImageView.snp.bottom).offset(10)
+            make.leading.equalToSuperview().offset(12)
+            make.bottom.equalToSuperview().offset(-12)
+            make.trailing.equalToSuperview().offset(-12)
         }
-        
-        
     }
     
-    
+}
+
+extension UITraitCollection {
+
+    var isIpad: Bool {
+        return horizontalSizeClass == .regular && verticalSizeClass == .regular
+    }
+
+    var isIphoneLandscape: Bool {
+        return verticalSizeClass == .compact
+    }
+
+    var isIphonePortrait: Bool {
+        return horizontalSizeClass == .compact && verticalSizeClass == .regular
+    }
+
+    var isIphone: Bool {
+        return isIphoneLandscape || isIphonePortrait
+    }
 }

@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 
 class ProductDetailView: UIView {
-    
+        
     lazy var titleLbl: UILabel = {
         let lbl = UILabel()
         lbl.font = .appFont(ofSize: 12)
@@ -66,7 +66,7 @@ class ProductDetailView: UIView {
         valueLbl.snp.makeConstraints { (make) in
             make.top.leading.equalTo(containerView).offset(8)
             make.bottom.equalTo(containerView).offset(-8)
-            make.trailing.lessThanOrEqualTo(containerView.snp.trailing).offset(-8)
+            make.trailing.equalTo(containerView.snp.trailing).offset(-8)
         }
         
     }

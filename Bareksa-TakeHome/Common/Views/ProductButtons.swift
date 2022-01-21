@@ -48,13 +48,13 @@ class ProductButtons: UIView {
         addSubview(beliBtn)
         
         detailBtn.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(16)
+            make.top.equalToSuperview().offset(12)
             make.height.equalTo(35)
             make.trailing.leading.equalToSuperview()
         }
         
         beliBtn.snp.makeConstraints { make in
-            make.top.equalTo(detailBtn.snp.bottom).offset(5)
+            make.top.equalTo(detailBtn.snp.bottom).offset(12)
             make.height.equalTo(35)
             make.bottom.trailing.leading.equalToSuperview()
         }
