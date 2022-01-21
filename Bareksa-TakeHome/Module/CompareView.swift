@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import SnapKit
 import SDWebImage
+import Charts
 
 class CompareView: UIView {
     
@@ -16,6 +17,7 @@ class CompareView: UIView {
     
     static let defaultMargin = 16
     
+    //MARK: - Views
     lazy var scrollView: UIScrollView = {
         let scroll = UIScrollView()
         return scroll
@@ -24,6 +26,24 @@ class CompareView: UIView {
     lazy var contentView: UIView = {
         let view = UIView()
         return view
+    }()
+    
+    lazy var lineChartView: LineChartView = {
+        let charts = LineChartView()
+        charts.backgroundColor = .clear
+        charts.extraLeftOffset = CGFloat(CompareView.defaultMargin)
+        charts.rightAxis.enabled = true
+        charts.leftAxis.enabled = false
+        charts.xAxis.labelPosition = .bottom
+        charts.xAxis.valueFormatter = XAxisNameFormater()
+        charts.xAxis.granularity = 1.0
+        charts.pinchZoomEnabled = false
+        let yAxis = charts.rightAxis
+        yAxis.setLabelCount(5, force: true)
+        yAxis.labelTextColor = .black
+        let xAxis = charts.xAxis
+        xAxis.setLabelCount(5, force: true)
+        return charts
     }()
     
     lazy var productTitleStackView: UIStackView = {
@@ -52,12 +72,15 @@ class CompareView: UIView {
      }
     
     func setup() {
+        //MARK: -Adding Views
         self.backgroundColor = .white
         addSubview(scrollView)
         scrollView.addSubview(contentView)
+        contentView.addSubview(lineChartView)
         contentView.addSubview(productTitleStackView)
         contentView.addSubview(productDetailStackView)
         
+        //MARK: -Constraints
         scrollView.snp.makeConstraints { (make) in
             make.top.equalTo(self.safeTopAnchor)
             make.bottom.equalTo(self.safeBottomAnchor)
@@ -69,8 +92,14 @@ class CompareView: UIView {
             make.top.bottom.leading.trailing.width.equalToSuperview()
         }
         
+        lineChartView.snp.makeConstraints { (make) in
+            make.top.leading.equalToSuperview().offset(CompareView.defaultMargin)
+            make.trailing.equalToSuperview().offset(-CompareView.defaultMargin)
+            make.height.equalTo(300)
+        }
+        
         productTitleStackView.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(8)
+            make.top.equalTo(lineChartView.snp.bottom).offset(CompareView.defaultMargin)
             make.trailing.equalToSuperview().offset(-CompareView.defaultMargin)
             make.leading.equalToSuperview().offset(CompareView.defaultMargin)
         }
@@ -87,16 +116,7 @@ class CompareView: UIView {
         
         for (index,viewModel) in productDetailsViewModels.enumerated() {
             
-            var color: UIColor
-            switch index {
-            case 0:
-                color = .productGreen
-            case 1:
-                color = .productPink
-            default:
-                color = .productBlue
-            }
-            
+            let color: UIColor = .black
             
             let productTitleView = ProductTitleView(color: color)
             productTitleView.titleLbl.text = viewModel.productTitle
@@ -118,13 +138,15 @@ class CompareView: UIView {
                 productDetailView.valueLbl.text = detail.value
                 productDetailVerticalStackview.addArrangedSubview(productDetailView)
             }
+            
             //buttons
             let buttons = ProductButtons()
             productDetailVerticalStackview.addArrangedSubview(buttons)
             
             productDetailStackView.addArrangedSubview(productDetailVerticalStackview)
         }
-        
-        
     }
-}
+    
+    
+    }
+

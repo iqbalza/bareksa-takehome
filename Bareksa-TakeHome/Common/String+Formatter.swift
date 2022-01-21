@@ -8,9 +8,11 @@
 import Foundation
 
 extension String {
-    func miliSecFromDate(dateFormat: String) -> Double{
+    func miliSecFromDate(dateFormat: String) -> Double {
             let formatter = DateFormatter()
             formatter.dateFormat = dateFormat
+            formatter.locale = Locale(identifier: "id")
+
             let ObjDate = formatter.date(from: self)
                 
             return ObjDate!.timeIntervalSince1970*1000

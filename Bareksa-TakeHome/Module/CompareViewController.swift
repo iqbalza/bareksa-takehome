@@ -27,19 +27,37 @@ class CompareViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupDelegates()
         bindViewModel()
         viewModel.viewDidLoad()
     }
     
+    func setupDelegates() {
+        myView.lineChartView.delegate = self
+    }
+    
     func bindViewModel() {
-        viewModel.productDetailsViewModels
+        viewModel
+            .productDetailsViewModels
             .drive(onNext: { [weak self] viewModels in
                 self?.myView.renderInfoView(productDetailsViewModels: viewModels)
             })
             .disposed(by: disposeBag)
-
+        
+        viewModel
+            .chartData
+            .drive(
+                onNext: { data in
+                    for (index, dataSet) in data.dataSets.enumerated() {
+                        (dataSet as! LineChartDataSet).colors = [UIColor.getLineColor(index: index)]
+                    }
+                    self.myView.lineChartView.data = data
+                })
+            .disposed(by: disposeBag)
     }
     
-    
+}
+
+extension CompareViewController: ChartViewDelegate {
     
 }

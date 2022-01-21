@@ -19,14 +19,16 @@ struct ChartDataResponse: Codable {
     struct ChartData: Codable {
         let data: [Data]
         let error: String
+        
+        struct Data: Codable {
+            let date: String
+            let value: Double
+            let growth: Double
+        }
     }
 
     // MARK: - DatumElement
-    struct Data: Codable {
-        let date: String
-        let value: Double
-        let growth: Double
-    }
+    
     
 }
 

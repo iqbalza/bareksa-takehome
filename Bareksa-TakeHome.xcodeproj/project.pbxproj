@@ -12,7 +12,6 @@
 		A89A5DB43777E57AC6B67547 /* Pods_Bareksa_TakeHome_Bareksa_TakeHomeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 267F97A45A29BBADF3A580DB /* Pods_Bareksa_TakeHome_Bareksa_TakeHomeUITests.framework */; };
 		F27EFEF62797E23900F24869 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFEF52797E23900F24869 /* AppDelegate.swift */; };
 		F27EFEFA2797E23900F24869 /* CompareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFEF92797E23900F24869 /* CompareViewController.swift */; };
-		F27EFEFD2797E23900F24869 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F27EFEFB2797E23900F24869 /* Main.storyboard */; };
 		F27EFEFF2797E23B00F24869 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F27EFEFE2797E23B00F24869 /* Assets.xcassets */; };
 		F27EFF022797E23B00F24869 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F27EFF002797E23B00F24869 /* LaunchScreen.storyboard */; };
 		F27EFF0D2797E23C00F24869 /* Bareksa_TakeHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFF0C2797E23C00F24869 /* Bareksa_TakeHomeTests.swift */; };
@@ -27,6 +26,17 @@
 		F27EFF36279804E800F24869 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFF35279804E800F24869 /* APIClient.swift */; };
 		F27EFF382798052B00F24869 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFF372798052B00F24869 /* APIError.swift */; };
 		F27EFF3A279822E600F24869 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFF39279822E600F24869 /* APIService.swift */; };
+		F27EFF3D279868AD00F24869 /* XAxisNameFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFF3C279868AD00F24869 /* XAxisNameFormatter.swift */; };
+		F27EFF3F2798698A00F24869 /* String+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFF3E2798698A00F24869 /* String+Formatter.swift */; };
+		F27EFF4127991F9500F24869 /* CustomMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFF4027991F9500F24869 /* CustomMarker.swift */; };
+		F27EFF452799827800F24869 /* ProductTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFF442799827800F24869 /* ProductTitleView.swift */; };
+		F27EFF47279985D100F24869 /* UIFont+AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFF46279985D100F24869 /* UIFont+AppFont.swift */; };
+		F27EFF4927998E9700F24869 /* CompareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFF4827998E9700F24869 /* CompareView.swift */; };
+		F27EFF4B2799908000F24869 /* UIView+SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFF4A2799908000F24869 /* UIView+SafeArea.swift */; };
+		F27EFF4D27999A4E00F24869 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFF4C27999A4E00F24869 /* ProductDetailView.swift */; };
+		F27EFF4F2799D01F00F24869 /* Double+PriceFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFF4E2799D01F00F24869 /* Double+PriceFormatter.swift */; };
+		F27EFF512799F28800F24869 /* ProductButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFF502799F28800F24869 /* ProductButtons.swift */; };
+		F27EFF53279A652200F24869 /* UIColor+AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFF52279A652200F24869 /* UIColor+AppColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +69,6 @@
 		F27EFEF22797E23900F24869 /* Bareksa-TakeHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bareksa-TakeHome.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F27EFEF52797E23900F24869 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F27EFEF92797E23900F24869 /* CompareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareViewController.swift; sourceTree = "<group>"; };
-		F27EFEFC2797E23900F24869 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F27EFEFE2797E23B00F24869 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F27EFF012797E23B00F24869 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F27EFF032797E23B00F24869 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,6 +86,17 @@
 		F27EFF35279804E800F24869 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		F27EFF372798052B00F24869 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		F27EFF39279822E600F24869 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		F27EFF3C279868AD00F24869 /* XAxisNameFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XAxisNameFormatter.swift; sourceTree = "<group>"; };
+		F27EFF3E2798698A00F24869 /* String+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Formatter.swift"; sourceTree = "<group>"; };
+		F27EFF4027991F9500F24869 /* CustomMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMarker.swift; sourceTree = "<group>"; };
+		F27EFF442799827800F24869 /* ProductTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTitleView.swift; sourceTree = "<group>"; };
+		F27EFF46279985D100F24869 /* UIFont+AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+AppFont.swift"; sourceTree = "<group>"; };
+		F27EFF4827998E9700F24869 /* CompareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareView.swift; sourceTree = "<group>"; };
+		F27EFF4A2799908000F24869 /* UIView+SafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SafeArea.swift"; sourceTree = "<group>"; };
+		F27EFF4C27999A4E00F24869 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		F27EFF4E2799D01F00F24869 /* Double+PriceFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+PriceFormatter.swift"; sourceTree = "<group>"; };
+		F27EFF502799F28800F24869 /* ProductButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductButtons.swift; sourceTree = "<group>"; };
+		F27EFF52279A652200F24869 /* UIColor+AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AppColor.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +162,8 @@
 		F27EFEF42797E23900F24869 /* Bareksa-TakeHome */ = {
 			isa = PBXGroup;
 			children = (
+				F27EFF422799824F00F24869 /* Common */,
+				F27EFF3B2798689D00F24869 /* Utils */,
 				F27EFF302797F6E800F24869 /* Models */,
 				F27EFF2D2797F54300F24869 /* API */,
 				F27EFF282797F34D00F24869 /* Font */,
@@ -174,9 +196,9 @@
 		F27EFF272797F17800F24869 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				F27EFEFB2797E23900F24869 /* Main.storyboard */,
 				F27EFEF92797E23900F24869 /* CompareViewController.swift */,
 				F27EFF252797F17100F24869 /* CompareViewModel.swift */,
+				F27EFF4827998E9700F24869 /* CompareView.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -208,6 +230,38 @@
 				F27EFF332797FFA200F24869 /* ChartDataResponse.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F27EFF3B2798689D00F24869 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F27EFF422799824F00F24869 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F27EFF432799825700F24869 /* Views */,
+				F27EFF3E2798698A00F24869 /* String+Formatter.swift */,
+				F27EFF46279985D100F24869 /* UIFont+AppFont.swift */,
+				F27EFF4E2799D01F00F24869 /* Double+PriceFormatter.swift */,
+				F27EFF4A2799908000F24869 /* UIView+SafeArea.swift */,
+				F27EFF52279A652200F24869 /* UIColor+AppColor.swift */,
+				F27EFF3C279868AD00F24869 /* XAxisNameFormatter.swift */,
+				F27EFF4027991F9500F24869 /* CustomMarker.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F27EFF432799825700F24869 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F27EFF442799827800F24869 /* ProductTitleView.swift */,
+				F27EFF4C27999A4E00F24869 /* ProductDetailView.swift */,
+				F27EFF502799F28800F24869 /* ProductButtons.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		FDB2AB35031B015890BBCB23 /* Pods */ = {
@@ -335,7 +389,6 @@
 				F27EFF022797E23B00F24869 /* LaunchScreen.storyboard in Resources */,
 				F27EFEFF2797E23B00F24869 /* Assets.xcassets in Resources */,
 				F27EFF2A2797F36000F24869 /* Montserrat-Medium.ttf in Resources */,
-				F27EFEFD2797E23900F24869 /* Main.storyboard in Resources */,
 				F27EFF2C2797F36A00F24869 /* Montserrat-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,13 +518,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				F27EFF262797F17100F24869 /* CompareViewModel.swift in Sources */,
+				F27EFF4D27999A4E00F24869 /* ProductDetailView.swift in Sources */,
+				F27EFF3F2798698A00F24869 /* String+Formatter.swift in Sources */,
+				F27EFF47279985D100F24869 /* UIFont+AppFont.swift in Sources */,
+				F27EFF452799827800F24869 /* ProductTitleView.swift in Sources */,
 				F27EFEFA2797E23900F24869 /* CompareViewController.swift in Sources */,
+				F27EFF4927998E9700F24869 /* CompareView.swift in Sources */,
+				F27EFF512799F28800F24869 /* ProductButtons.swift in Sources */,
 				F27EFF342797FFA200F24869 /* ChartDataResponse.swift in Sources */,
+				F27EFF53279A652200F24869 /* UIColor+AppColor.swift in Sources */,
+				F27EFF4F2799D01F00F24869 /* Double+PriceFormatter.swift in Sources */,
 				F27EFF36279804E800F24869 /* APIClient.swift in Sources */,
 				F27EFEF62797E23900F24869 /* AppDelegate.swift in Sources */,
+				F27EFF3D279868AD00F24869 /* XAxisNameFormatter.swift in Sources */,
 				F27EFF322797F70900F24869 /* ProductDetailResponse.swift in Sources */,
 				F27EFF2F2797F56C00F24869 /* Endpoint.swift in Sources */,
 				F27EFF3A279822E600F24869 /* APIService.swift in Sources */,
+				F27EFF4127991F9500F24869 /* CustomMarker.swift in Sources */,
+				F27EFF4B2799908000F24869 /* UIView+SafeArea.swift in Sources */,
 				F27EFF382798052B00F24869 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,14 +573,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F27EFEFB2797E23900F24869 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F27EFEFC2797E23900F24869 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F27EFF002797E23B00F24869 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -657,7 +713,6 @@
 				INFOPLIST_FILE = "Bareksa-TakeHome/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -687,7 +742,6 @@
 				INFOPLIST_FILE = "Bareksa-TakeHome/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

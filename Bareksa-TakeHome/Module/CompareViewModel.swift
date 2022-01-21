@@ -8,6 +8,7 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import Charts
 
 class CompareViewModel {
     
@@ -18,13 +19,27 @@ class CompareViewModel {
     
     private var _productDetailsViewModels = PublishRelay<[ProductDetailViewModel]>()
     
+    private var _chartData = PublishRelay<LineChartData?>()
+
+    
     //MARK: - Public properties
     var productDetailsViewModels: Driver<[ProductDetailViewModel]> {
         _productDetailsViewModels.asDriver(onErrorJustReturn: [])
     }
     
+    var chartData: Driver<LineChartData> {
+        _chartData
+            .asDriver(onErrorJustReturn: nil)
+            .compactMap{$0}
+    }
+    
     init(apiService: APIServiceProtocol = ApiService()) {
         self.apiService = apiService
+    }
+    
+    func viewDidLoad() {
+        getProductDetails()
+        getChartData()
     }
     
     private func getProductDetails() {
@@ -47,9 +62,69 @@ class CompareViewModel {
 
     }
     
-    func viewDidLoad() {
-        getProductDetails()
+    private func getChartData() {
+        apiService
+            .getCharts(productCodes: ["test"])
+            .subscribe(on: ConcurrentDispatchQueueScheduler(qos: .background))
+            .map {
+                return $0.data
+            }
+            .observe(on: MainScheduler.instance)
+            .subscribe { [weak self] chartData in
+                self?.handleChartData(data: chartData)
+            } onFailure: { error in
+                
+            }.disposed(by: disposeBag)
+
     }
+    
+    private func handleChartData(data: [String:ChartDataResponse.ChartData]) {
+            
+            var arr = [[ChartDataResponse.ChartData.Data]]()
+            
+            for chartData in data {
+                arr.append(chartData.value.data)
+            }
+            
+            let lineChartData = LineChartData()
+            
+            for (index,item) in arr.enumerated() {
+                
+                var dataEntries: [ChartDataEntry] = []
+                
+                for chartData in item {
+                    print(chartData.date)
+                    let x = chartData.date.miliSecFromDate(dateFormat: "yyyy-MM-dd")
+                    let y = chartData.growth
+                    let dataEntry = ChartDataEntry(x: x, y: y)
+                    dataEntries.append(dataEntry)
+                }
+                
+                let lineChartDataSet = LineChartDataSet(entries: dataEntries,label: nil)
+                lineChartDataSet.mode = .linear
+                lineChartDataSet.drawCirclesEnabled = false
+                lineChartDataSet.drawHorizontalHighlightIndicatorEnabled = false
+                lineChartDataSet.lineWidth = 3
+//                lineChartDataSet.colors = UIColor
+                
+                //duplicate data set for drawing circle
+                let lineChartDataSetDup = LineChartDataSet(entries: [ChartDataEntry(x: dataEntries.last!.x, y: dataEntries.last!.y, data: true)],label: nil)
+                lineChartDataSetDup.mode = .linear
+                lineChartDataSetDup.drawCirclesEnabled = true
+                lineChartDataSetDup.drawHorizontalHighlightIndicatorEnabled = false
+                lineChartDataSetDup.lineWidth = 3
+            
+                
+//                chartDataTuple.append((lineChartDataSet,lineChartDataSetDup))
+                lineChartData.addDataSet(lineChartDataSet)
+//                lineChartData.addDataSet(lineChartDataSetDup)
+            }
+            
+           
+            _chartData.accept(lineChartData)
+        }
+    
+   
     
 }
 
