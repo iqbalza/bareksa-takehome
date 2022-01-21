@@ -8,13 +8,16 @@
 import UIKit
 import SnapKit
 
-class TitleInfoView: UIView {
+class ProductTitleView: UIView {
+    
+    
+    var color: UIColor
     
     lazy var containerView: UIView = {
         let containerView = UIView()
-        containerView.backgroundColor = .green
+        containerView.backgroundColor = color
         containerView.layer.cornerRadius = 4
-        containerView.alpha = 0.6
+        containerView.alpha = 1
         return containerView
     }()
     
@@ -22,7 +25,7 @@ class TitleInfoView: UIView {
         let titleLbl = UILabel()
         titleLbl.text = "Sucorinvest Money Fund"
         titleLbl.textColor = .black
-        titleLbl.font = .boldSystemFont(ofSize: 12)
+        titleLbl.font = .appFont(ofSize: 12)
         titleLbl.numberOfLines = 0
         return titleLbl
     }()
@@ -33,8 +36,9 @@ class TitleInfoView: UIView {
        return logoImageView
     }()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    init(color: UIColor) {
+        self.color = color
+        super.init(frame: .zero)
         setupConstraints()
     }
     
@@ -52,15 +56,15 @@ class TitleInfoView: UIView {
         }
         
         logoImageView.snp.makeConstraints { (make) in
-            make.top.leading.equalToSuperview().offset(8)
-            make.width.height.equalTo(30)
+            make.top.leading.equalToSuperview().offset(16)
+            make.width.height.equalTo(40)
         }
         
         titleLbl.snp.makeConstraints { (make) in
             make.top.equalTo(logoImageView.snp.bottom).offset(8)
-            make.leading.equalToSuperview().offset(8)
-            make.bottom.equalToSuperview().offset(-8)
-            make.trailing.lessThanOrEqualToSuperview().offset(-8)
+            make.leading.equalToSuperview().offset(16)
+            make.bottom.equalToSuperview().offset(-16)
+            make.trailing.lessThanOrEqualToSuperview().offset(-16)
         }
         
         

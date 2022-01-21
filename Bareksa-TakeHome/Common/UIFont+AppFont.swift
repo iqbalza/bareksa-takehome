@@ -14,6 +14,6 @@ extension UIFont {
     }
     
     static func boldAppFont(ofSize: CGFloat) -> UIFont {
-        return UIFont(name: "Montserrat", size: ofSize)!
+        return UIFont(name: "Montserrat-SemiBold", size: ofSize)!
     }
 }
