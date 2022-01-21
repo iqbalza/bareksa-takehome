@@ -7,6 +7,8 @@ target 'Bareksa-TakeHome' do
   pod 'RxSwift', '6.5.0'
   pod 'RxCocoa', '6.5.0'
   pod 'Charts'
+  pod 'SnapKit'
+  pod 'SDWebImage'
   # Pods for Bareksa-TakeHome
 
   target 'Bareksa-TakeHomeTests' do
