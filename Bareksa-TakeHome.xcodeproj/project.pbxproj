@@ -10,6 +10,8 @@
 		07D9E511A104E6A5DE3F79F2 /* Pods_Bareksa_TakeHomeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2772314A146E3B63B0FDF6A5 /* Pods_Bareksa_TakeHomeTests.framework */; };
 		8C4D4773BB2171EFE450DF2C /* Pods_Bareksa_TakeHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D57EBBD172D99E963AF3AE11 /* Pods_Bareksa_TakeHome.framework */; };
 		A89A5DB43777E57AC6B67547 /* Pods_Bareksa_TakeHome_Bareksa_TakeHomeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 267F97A45A29BBADF3A580DB /* Pods_Bareksa_TakeHome_Bareksa_TakeHomeUITests.framework */; };
+		F237C434279AB97800BFAFCD /* YAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F237C433279AB97800BFAFCD /* YAxisValueFormatter.swift */; };
+		F237C436279ABE3C00BFAFCD /* ChartLegendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F237C435279ABE3C00BFAFCD /* ChartLegendsView.swift */; };
 		F27EFEF62797E23900F24869 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFEF52797E23900F24869 /* AppDelegate.swift */; };
 		F27EFEFA2797E23900F24869 /* CompareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EFEF92797E23900F24869 /* CompareViewController.swift */; };
 		F27EFEFF2797E23B00F24869 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F27EFEFE2797E23B00F24869 /* Assets.xcassets */; };
@@ -66,6 +68,8 @@
 		B681A41AB7A04371CAB5BCE4 /* Pods-Bareksa-TakeHomeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bareksa-TakeHomeTests.debug.xcconfig"; path = "Target Support Files/Pods-Bareksa-TakeHomeTests/Pods-Bareksa-TakeHomeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D57EBBD172D99E963AF3AE11 /* Pods_Bareksa_TakeHome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bareksa_TakeHome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4FDADB0D3F3ED6B13E73FF8 /* Pods-Bareksa-TakeHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bareksa-TakeHome.release.xcconfig"; path = "Target Support Files/Pods-Bareksa-TakeHome/Pods-Bareksa-TakeHome.release.xcconfig"; sourceTree = "<group>"; };
+		F237C433279AB97800BFAFCD /* YAxisValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YAxisValueFormatter.swift; sourceTree = "<group>"; };
+		F237C435279ABE3C00BFAFCD /* ChartLegendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartLegendsView.swift; sourceTree = "<group>"; };
 		F27EFEF22797E23900F24869 /* Bareksa-TakeHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bareksa-TakeHome.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F27EFEF52797E23900F24869 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F27EFEF92797E23900F24869 /* CompareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareViewController.swift; sourceTree = "<group>"; };
@@ -249,6 +253,7 @@
 				F27EFF4A2799908000F24869 /* UIView+SafeArea.swift */,
 				F27EFF52279A652200F24869 /* UIColor+AppColor.swift */,
 				F27EFF3C279868AD00F24869 /* XAxisNameFormatter.swift */,
+				F237C433279AB97800BFAFCD /* YAxisValueFormatter.swift */,
 				F27EFF4027991F9500F24869 /* CustomMarker.swift */,
 			);
 			path = Common;
@@ -260,6 +265,7 @@
 				F27EFF442799827800F24869 /* ProductTitleView.swift */,
 				F27EFF4C27999A4E00F24869 /* ProductDetailView.swift */,
 				F27EFF502799F28800F24869 /* ProductButtons.swift */,
+				F237C435279ABE3C00BFAFCD /* ChartLegendsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -519,10 +525,12 @@
 			files = (
 				F27EFF262797F17100F24869 /* CompareViewModel.swift in Sources */,
 				F27EFF4D27999A4E00F24869 /* ProductDetailView.swift in Sources */,
+				F237C436279ABE3C00BFAFCD /* ChartLegendsView.swift in Sources */,
 				F27EFF3F2798698A00F24869 /* String+Formatter.swift in Sources */,
 				F27EFF47279985D100F24869 /* UIFont+AppFont.swift in Sources */,
 				F27EFF452799827800F24869 /* ProductTitleView.swift in Sources */,
 				F27EFEFA2797E23900F24869 /* CompareViewController.swift in Sources */,
+				F237C434279AB97800BFAFCD /* YAxisValueFormatter.swift in Sources */,
 				F27EFF4927998E9700F24869 /* CompareView.swift in Sources */,
 				F27EFF512799F28800F24869 /* ProductButtons.swift in Sources */,
 				F27EFF342797FFA200F24869 /* ChartDataResponse.swift in Sources */,
