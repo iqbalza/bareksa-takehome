@@ -16,6 +16,16 @@ class CompareView: UIView {
     
     static let defaultMargin = 16
     
+    lazy var scrollView: UIScrollView = {
+        let scroll = UIScrollView()
+        return scroll
+    }()
+    
+    lazy var contentView: UIView = {
+        let view = UIView()
+        return view
+    }()
+    
     lazy var productTitleStackView: UIStackView = {
         let stack = UIStackView()
         stack.distribution = .fillEqually
@@ -43,20 +53,33 @@ class CompareView: UIView {
     
     func setup() {
         self.backgroundColor = .white
+        addSubview(scrollView)
+        scrollView.addSubview(contentView)
+        contentView.addSubview(productTitleStackView)
+        contentView.addSubview(productDetailStackView)
         
-        addSubview(productTitleStackView)
-        addSubview(productDetailStackView)
+        scrollView.snp.makeConstraints { (make) in
+            make.top.equalTo(self.safeTopAnchor)
+            make.bottom.equalTo(self.safeBottomAnchor)
+            make.leading.trailing.equalToSuperview()
+            make.width.equalToSuperview()
+        }
+        
+        contentView.snp.makeConstraints { (make) in
+            make.top.bottom.leading.trailing.width.equalToSuperview()
+        }
         
         productTitleStackView.snp.makeConstraints { (make) in
-            make.top.equalTo(self.safeTopAnchor).offset(8)
-            make.trailing.equalTo(self.safeRightAnchor).offset(-CompareView.defaultMargin)
-            make.leading.equalTo(self.safeLeftAnchor).offset(CompareView.defaultMargin)
+            make.top.equalToSuperview().offset(8)
+            make.trailing.equalToSuperview().offset(-CompareView.defaultMargin)
+            make.leading.equalToSuperview().offset(CompareView.defaultMargin)
         }
         
         productDetailStackView.snp.makeConstraints { (make) in
             make.top.equalTo(productTitleStackView.snp.bottom).offset(16)
-            make.trailing.equalTo(self.safeRightAnchor).offset(-CompareView.defaultMargin)
-            make.leading.equalTo(self.safeLeftAnchor).offset(CompareView.defaultMargin)
+            make.trailing.equalToSuperview().offset(-CompareView.defaultMargin)
+            make.leading.equalToSuperview().offset(CompareView.defaultMargin)
+            make.bottom.equalToSuperview().offset(-16)
         }
     }
     
