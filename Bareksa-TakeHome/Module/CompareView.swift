@@ -13,10 +13,10 @@ import Charts
 
 class CompareView: UIView {
     
-    static let defaultItemSpacing: CGFloat = 8
+    static let defaultItemSpacing: CGFloat = 12
     
     static let defaultMargin = 16
-    
+        
     //MARK: - Views
     lazy var scrollView: UIScrollView = {
         let scroll = UIScrollView()
@@ -28,21 +28,28 @@ class CompareView: UIView {
         return view
     }()
     
+    lazy var chartLegendsView: ChartLegendsView = {
+        let view = ChartLegendsView()
+        return view
+    }()
+    
     lazy var lineChartView: LineChartView = {
         let charts = LineChartView()
         charts.backgroundColor = .clear
+        charts.legend.enabled = false
+        let marker = CircleMarker()
+        charts.marker = marker
         charts.extraLeftOffset = CGFloat(CompareView.defaultMargin)
         charts.rightAxis.enabled = true
         charts.leftAxis.enabled = false
         charts.xAxis.labelPosition = .bottom
         charts.xAxis.valueFormatter = XAxisNameFormater()
+        charts.xAxis.labelTextColor = .black
         charts.xAxis.granularity = 1.0
         charts.pinchZoomEnabled = false
         let yAxis = charts.rightAxis
-        yAxis.setLabelCount(5, force: true)
         yAxis.labelTextColor = .black
-        let xAxis = charts.xAxis
-        xAxis.setLabelCount(5, force: true)
+        yAxis.valueFormatter = YAxisNameFormater()
         return charts
     }()
     
@@ -50,6 +57,7 @@ class CompareView: UIView {
         let stack = UIStackView()
         stack.distribution = .fillEqually
         stack.axis = .horizontal
+//        stack.alignment = .center
         stack.spacing = CompareView.defaultItemSpacing
        return stack
     }()
@@ -76,6 +84,7 @@ class CompareView: UIView {
         self.backgroundColor = .white
         addSubview(scrollView)
         scrollView.addSubview(contentView)
+        contentView.addSubview(chartLegendsView)
         contentView.addSubview(lineChartView)
         contentView.addSubview(productTitleStackView)
         contentView.addSubview(productDetailStackView)
@@ -92,8 +101,14 @@ class CompareView: UIView {
             make.top.bottom.leading.trailing.width.equalToSuperview()
         }
         
-        lineChartView.snp.makeConstraints { (make) in
+        chartLegendsView.snp.makeConstraints { make in
             make.top.leading.equalToSuperview().offset(CompareView.defaultMargin)
+            make.trailing.lessThanOrEqualToSuperview().offset(-CompareView.defaultMargin)
+        }
+        
+        lineChartView.snp.makeConstraints { (make) in
+            make.top.equalTo(chartLegendsView.snp.bottom).offset(CompareView.defaultMargin)
+            make.leading.equalToSuperview().offset(CompareView.defaultMargin)
             make.trailing.equalToSuperview().offset(-CompareView.defaultMargin)
             make.height.equalTo(300)
         }
@@ -105,10 +120,10 @@ class CompareView: UIView {
         }
         
         productDetailStackView.snp.makeConstraints { (make) in
-            make.top.equalTo(productTitleStackView.snp.bottom).offset(16)
+            make.top.equalTo(productTitleStackView.snp.bottom).offset(20)
             make.trailing.equalToSuperview().offset(-CompareView.defaultMargin)
             make.leading.equalToSuperview().offset(CompareView.defaultMargin)
-            make.bottom.equalToSuperview().offset(-16)
+            make.bottom.equalToSuperview().offset(-20)
         }
     }
     
@@ -116,7 +131,7 @@ class CompareView: UIView {
         
         for (index,viewModel) in productDetailsViewModels.enumerated() {
             
-            let color: UIColor = .black
+            let color: UIColor = CompareView.getProductColor(index: index)
             
             let productTitleView = ProductTitleView(color: color)
             productTitleView.titleLbl.text = viewModel.productTitle
@@ -124,7 +139,7 @@ class CompareView: UIView {
             productTitleStackView.addArrangedSubview(productTitleView)
             
             let productDetailVerticalStackview = UIStackView()
-            productDetailVerticalStackview.spacing = 16
+            productDetailVerticalStackview.spacing = 8
             productDetailVerticalStackview.distribution = .equalSpacing
             productDetailVerticalStackview.axis = .vertical
             
@@ -149,4 +164,27 @@ class CompareView: UIView {
     
     
     }
+
+extension CompareView {
+    static func getProductColor(index: Int) -> UIColor {
+        switch index {
+        case 0:
+           return .productGreen
+        case 1:
+            return .productPurple
+        default:
+            return .productBlue
+        }
+}
+    static func getLineColor(index: Int) -> UIColor {
+        switch index {
+        case 0:
+           return .lineGreen
+        case 1:
+            return .linePurple
+        default:
+            return .lineBlue
+        }
+    }
+}
 

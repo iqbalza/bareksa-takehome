@@ -20,6 +20,8 @@ class CompareViewModel {
     private var _productDetailsViewModels = PublishRelay<[ProductDetailViewModel]>()
     
     private var _chartData = PublishRelay<LineChartData?>()
+    
+    private var _legendValues = PublishRelay<LegendViewModel?>()
 
     
     //MARK: - Public properties
@@ -32,7 +34,12 @@ class CompareViewModel {
             .asDriver(onErrorJustReturn: nil)
             .compactMap{$0}
     }
-    
+    var legendValues: Driver<LegendViewModel> {
+        _legendValues
+            .asDriver(onErrorJustReturn: nil)
+            .compactMap{$0}
+    }
+        
     init(apiService: APIServiceProtocol = ApiService()) {
         self.apiService = apiService
     }
@@ -40,6 +47,21 @@ class CompareViewModel {
     func viewDidLoad() {
         getProductDetails()
         getChartData()
+    }
+    
+    func valueDidSelect(entry: [ChartDataEntry]) {
+        
+        var thirdValue: String?
+        
+        if entry.count == 3 {
+            thirdValue = "\(entry[2].y) %"
+        } else {
+            thirdValue = nil
+        }
+        
+        _legendValues.accept(
+            LegendViewModel(firstValue: "\(entry[0].y) %", secondValue: "\(entry[1].y) %", thirdValue: thirdValue, date: entry[0].x.formatTime(format: "dd MMMM yyyy"))
+        )
     }
     
     private func getProductDetails() {
@@ -93,10 +115,9 @@ class CompareViewModel {
                 var dataEntries: [ChartDataEntry] = []
                 
                 for chartData in item {
-                    print(chartData.date)
                     let x = chartData.date.miliSecFromDate(dateFormat: "yyyy-MM-dd")
                     let y = chartData.growth
-                    let dataEntry = ChartDataEntry(x: x, y: y)
+                    let dataEntry = ChartDataEntry(x: x, y: y, data: index)
                     dataEntries.append(dataEntry)
                 }
                 
@@ -105,19 +126,8 @@ class CompareViewModel {
                 lineChartDataSet.drawCirclesEnabled = false
                 lineChartDataSet.drawHorizontalHighlightIndicatorEnabled = false
                 lineChartDataSet.lineWidth = 3
-//                lineChartDataSet.colors = UIColor
                 
-                //duplicate data set for drawing circle
-                let lineChartDataSetDup = LineChartDataSet(entries: [ChartDataEntry(x: dataEntries.last!.x, y: dataEntries.last!.y, data: true)],label: nil)
-                lineChartDataSetDup.mode = .linear
-                lineChartDataSetDup.drawCirclesEnabled = true
-                lineChartDataSetDup.drawHorizontalHighlightIndicatorEnabled = false
-                lineChartDataSetDup.lineWidth = 3
-            
-                
-//                chartDataTuple.append((lineChartDataSet,lineChartDataSetDup))
                 lineChartData.addDataSet(lineChartDataSet)
-//                lineChartData.addDataSet(lineChartDataSetDup)
             }
             
            
@@ -212,4 +222,14 @@ extension CompareViewModel {
         }
     }
     
+    
+    
+    
+}
+
+struct LegendViewModel {
+    var firstValue: String
+    var secondValue: String
+    var thirdValue: String?
+    var date: String
 }

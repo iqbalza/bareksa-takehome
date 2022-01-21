@@ -27,6 +27,7 @@ class CompareViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Perbandingan"
         setupDelegates()
         bindViewModel()
         viewModel.viewDidLoad()
@@ -49,15 +50,45 @@ class CompareViewController: UIViewController {
             .drive(
                 onNext: { data in
                     for (index, dataSet) in data.dataSets.enumerated() {
-                        (dataSet as! LineChartDataSet).colors = [UIColor.getLineColor(index: index)]
+                        (dataSet as! LineChartDataSet).colors = [CompareView.getLineColor(index: index)]
                     }
                     self.myView.lineChartView.data = data
                 })
             .disposed(by: disposeBag)
+        
+        viewModel.legendValues
+            .drive ( onNext: { [weak self] legendViewModel in
+                if let thirdValue = legendViewModel.thirdValue {
+                    self?.myView.chartLegendsView.thirdIcon.isHidden = false
+                    self?.myView.chartLegendsView.thirdValueLbl.text = thirdValue
+                } else {
+                    self?.myView.chartLegendsView.thirdIcon.isHidden = true
+
+                }
+                self?.myView.chartLegendsView.firstValueLbl.text = legendViewModel.firstValue
+                self?.myView.chartLegendsView.secondValueLbl.text = legendViewModel.secondValue
+                self?.myView.chartLegendsView.dateLbl.text = legendViewModel.date
+            }).disposed(by: disposeBag)
+
     }
     
 }
 
 extension CompareViewController: ChartViewDelegate {
-    
+    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+            
+        var toHighlights = [Highlight]()
+        var entries = [ChartDataEntry]()
+        for (index, dataSet) in chartView.data!.dataSets.enumerated() {
+            let toHighlight = Highlight(x: highlight.x, y: Double.nan, dataSetIndex: index )
+            toHighlights.append(toHighlight)
+            
+            let entry = dataSet.entriesForXValue(highlight.x)
+            entries.append(contentsOf: entry)
+        }
+        myView.lineChartView.highlightValues(toHighlights)
+        
+        viewModel.valueDidSelect(entry: entries)
+
+        }
 }
